@@ -8,8 +8,10 @@ namespace TicTocToeBoard
         {
             Console.WriteLine("Welcome to Tic Tac Toe Game Board.");
             TicTacToeGame obj = new TicTacToeGame();
-            obj.boardCreate();
-            obj.ChoosePlayer();
+
+            Char[] board = obj.boardCreate();
+            obj.choosePlayer();
+            obj.showGameBoard(board);
         }
        
     }
