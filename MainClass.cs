@@ -7,8 +7,8 @@ namespace TicTocToeBoard
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Tic Tac Toe Game Board.");
-            UC1_TicTacToeGame obj = new UC1_TicTacToeGame();
-            obj.play();
+            TicTacToeGame obj = new TicTacToeGame();
+            obj.boardCreate();
         }
     }
 }
