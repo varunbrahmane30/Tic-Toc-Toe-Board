@@ -6,32 +6,47 @@ namespace TicTocToeBoard
 {
     class TicTacToeGame
     {
+
+        public const char X = 'X';
+        public const char O = 'O';
+       
         public char[] boardCreate()
         {
-            char[] CreateBoard = new char[10];
-            for (int i = 1; i < CreateBoard.Length; i++)
+            char[] board = new char[10];
+            for (int i = 1; i < board.Length; i++)
             {
-                CreateBoard[i] = ' ';
+                board[i] = ' ';
             }
             Console.WriteLine("Board Initialized");
-            return CreateBoard;
+            return board;
         }
 
-        public char ChoosePlayer()
+        public void choosePlayer()
         {
-            char[] choice = new char[] { 'X', 'O' };
-            Console.WriteLine("Choose X or O ");
-            char playerChoice = char.Parse(Console.ReadLine());
-            if (playerChoice == choice[0])
+            Console.WriteLine("Enter you Choice from O/X :");
+            char playerChoice = Convert.ToChar(Console.ReadLine());
+            if (playerChoice == 'X')
             {
-                playerChoice = choice[0];
+                Console.WriteLine("Player Chose " + playerChoice);
+                Console.WriteLine("Computer Chose " + O);
+            }
+            else if (playerChoice == 'O')
+            {
+                Console.WriteLine("Player Chose " + playerChoice);
+                Console.WriteLine(" Computer Chose " + X);
             }
             else
             {
-                playerChoice = choice[1];
+                Console.WriteLine("Entered invalid input  ");
             }
-            return playerChoice;
         }
-
+        public void showGameBoard(char[] board)
+        {
+            Console.WriteLine(board[1] + " | " + board[2] + " |" + board[3]);
+            Console.WriteLine("-------------");
+            Console.WriteLine(board[4] + " | " + board[5] + " | " + board[6]);
+            Console.WriteLine("-------------");
+            Console.WriteLine(board[7] + " | " + board[8] + " | " + board[9]);
+        }
     }
 }
