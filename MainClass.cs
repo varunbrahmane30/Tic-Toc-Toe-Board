@@ -2,11 +2,13 @@
 
 namespace TicTocToeBoard
 {
-    class Program
+    class MainClass
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Tic Tac Toe Game Board.");
+
+            UC1_TicTacToeGame.play();
         }
     }
 }
